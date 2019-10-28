@@ -846,7 +846,7 @@ func (m schemaMap) internalValidate(topSchemaMap schemaMap, attrsOnly bool) erro
 }
 
 func isValidFieldName(name string) bool {
-	re := regexp.MustCompile("^[a-z0-9_]+$")
+	re := regexp.MustCompile("^[-A-Za-z0-9_@]+$")
 	return re.MatchString(name)
 }
 
